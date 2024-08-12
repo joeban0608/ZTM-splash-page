@@ -1,6 +1,11 @@
 const { body } = document;
-
+let count = 0
+const ourMemory = {
+  [count]: Array(10000).fill("*")
+}
 function changeBackground(number) {
+  count++
+  ourMemory[count] = Array(10000).fill("*");
   // Check if background already showing
   let previousBackground;
   if (body.className) {
